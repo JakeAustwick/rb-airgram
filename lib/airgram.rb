@@ -51,6 +51,3 @@ private
     end
   end
 end
-
-client = Airgram.new()
-p client.send_as_guest("contact@mumbodesign.com", "s there")
