@@ -42,7 +42,7 @@ private
   end
 
   def request_successful?(response)
-    response.parsed_response['status'] == "ok"
+    response.code == 200
   end
 
   def check_auth_details!
@@ -51,3 +51,6 @@ private
     end
   end
 end
+
+client = Airgram.new()
+p client.send_as_guest("contact@mumbodesign.com", "s there")
