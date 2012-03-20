@@ -46,7 +46,7 @@ private
   end
 
   def check_auth_details!
-    unless @auth.has_key?(:username) && @auth.has_key?(:username)
+    unless @auth.has_key?(:username) && @auth.has_key?(:password)
       raise AuthenticationError, "Calling a method that requires authentication with no Service Key or Service Secret!"
     end
   end
